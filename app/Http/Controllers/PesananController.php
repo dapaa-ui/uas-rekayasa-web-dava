@@ -27,12 +27,12 @@ class PesananController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-        return view('Pesanan.index');
+        return view('pesanan.index');
     }
 
     public function create()
     {
-        return view('Pesanan.create');
+        return view('pesanan.create');
     }
 
     public function store(Request $request)
@@ -46,13 +46,13 @@ class PesananController extends Controller
 
         Pesanan::create($request->all());
 
-        return redirect()->route('Pesanan.index')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('pesanan.index')->with('success', 'Data berhasil ditambahkan');
     }
 
     public function edit($id)
     {
         $pesanan = Pesanan::findOrFail($id);
-        return view('Pesanan.edit', compact('pesanan'));
+        return view('pesanan.edit', compact('pesanan'));
     }
 
     public function update(Request $request, $id)
@@ -67,18 +67,18 @@ class PesananController extends Controller
         $pesanan = Pesanan::findOrFail($id);
         $pesanan->update($request->all());
 
-        return redirect()->route('Pesanan.index')->with('success', 'Data berhasil diupdate');
+        return redirect()->route('pesanan.index')->with('success', 'Data berhasil diupdate');
     }
 
     public function destroy($id)
     {
         Pesanan::destroy($id);
-        return redirect()->route('Pesanan.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('pesanan.index')->with('success', 'Data berhasil dihapus');
     }
 
     public function generatePDF() {
         $data = Pesanan::all();
-        $pdf = pdf::loadView('Pesanan.export-pdf', compact('data'));
+        $pdf = pdf::loadView('pesanan.export-pdf', compact('data'));
 
         return $pdf->download('pesanan.pdf');
     }
