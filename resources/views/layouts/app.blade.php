@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Admin E-Commerce</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/datatable.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/css/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/css/datatable.bootstrap5.min.css') }}">
     @stack('styles')
     <style>
         body {
@@ -37,7 +37,7 @@
             <nav class="col-md-2 d-none d-md-block sidebar py-4">
                 <div class="position-sticky">
                 <div class="mb-4 text-center">
-                    <img src="{{ asset('assets/image/logodapuy1.png') }}" style="max-width: 120px; height:auto;" alt="">
+                    <img src="{{ secure_asset('assets/image/logodapuy1.png') }}" style="max-width: 120px; height:auto;" alt="">
                 </div>
                     <h4 class="text-center mb-4">E-Commerce</h4>
                     <ul class="nav flex-column">
@@ -91,11 +91,11 @@
             </main>
         </div>
     </div>
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/datatables.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('assets/js/datatable.bootstrap5.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/datatables.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/datatable.bootstrap5.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

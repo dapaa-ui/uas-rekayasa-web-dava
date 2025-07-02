@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Login - E-Commerce Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('assets/image/baground.jpg') }}') no-repeat center center fixed;
@@ -81,6 +81,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
