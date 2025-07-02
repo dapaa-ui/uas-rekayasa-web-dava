@@ -32,7 +32,7 @@ class PesananController extends Controller
 
     public function create()
     {
-        return view('pesanan.create');
+        return view('Pesanan.create');
     }
 
     public function store(Request $request)
@@ -52,7 +52,7 @@ class PesananController extends Controller
     public function edit($id)
     {
         $pesanan = Pesanan::findOrFail($id);
-        return view('pesanan.edit', compact('pesanan'));
+        return view('Pesanan.edit', compact('pesanan'));
     }
 
     public function update(Request $request, $id)
@@ -67,18 +67,18 @@ class PesananController extends Controller
         $pesanan = Pesanan::findOrFail($id);
         $pesanan->update($request->all());
 
-        return redirect()->route('pesanan.index')->with('success', 'Data berhasil diupdate');
+        return redirect()->route('Pesanan.index')->with('success', 'Data berhasil diupdate');
     }
 
     public function destroy($id)
     {
         Pesanan::destroy($id);
-        return redirect()->route('pesanan.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('Pesanan.index')->with('success', 'Data berhasil dihapus');
     }
 
     public function generatePDF() {
         $data = Pesanan::all();
-        $pdf = pdf::loadView('pesanan.export-pdf', compact('data'));
+        $pdf = pdf::loadView('Pesanan.export-pdf', compact('data'));
 
         return $pdf->download('pesanan.pdf');
     }
