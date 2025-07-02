@@ -47,7 +47,7 @@ class PesananController extends Controller
         Pesanan::create($request->all());
 
         return redirect()->route('Pesanan.index')->with('success', 'Data berhasil ditambahkan');
-    
+    }
 
     public function edit($id)
     {
